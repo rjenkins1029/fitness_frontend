@@ -9,16 +9,17 @@ import {
 } from "@mui/material";
 
 
-const EditAnActivity = ({ activities, fetchActivities, navigate, token }) => {
+const EditAnActivity = ({ activities, fetchActivities, navigate, token, name, description }) => {
   const { activityID } = useParams();
+  const [newName, setNewName] = useState(name);
+    const [newDescription, setNewDescription] = useState(description);
   if (activities.length) {
     const currentActivity = activities.filter(activity => activity.id === parseInt(activityID));
 
     console.log(activities)
     const { name, description } = currentActivity;
 
-    const [newName, setNewName] = useState(name);
-    const [newDescription, setNewDescription] = useState(description);
+    
 
 
     async function editActivity() {
@@ -35,12 +36,13 @@ const EditAnActivity = ({ activities, fetchActivities, navigate, token }) => {
 
     return (
       <Card elevation={6} style={{
-        background: '#50514F',
-        margin: '2rem 4rem 6rem 2rem',
+        background: 'black',
+        height:'100%',
         padding: '2rem',
-        color: '#FFFCFF',
+        color: 'white',
         textAlign: 'center',
-        alignContent: 'center'
+        alignContent: 'center',
+        backgroundColor: 'black'
 
       }}>
         <div className="edit-main-div" >
@@ -79,10 +81,10 @@ const EditAnActivity = ({ activities, fetchActivities, navigate, token }) => {
               marginTop: "2%",
               width: "100%",
               borderRadius: 35,
-              background: "#001242",
+              background: "black",
               opacity: "70%",
               color: "#FFFCFF",
-              borderColor: "#24A6D1",
+              borderColor: "black",
             }}
               type="submit"
               variant="outlined"

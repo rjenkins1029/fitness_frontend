@@ -11,7 +11,7 @@ import {
   CardActionArea,
   CardActions
 } from "@mui/material";
-import navPIC from "./images/CreateActivity.png"
+import navPIC from "./images/wp7661163.jpg"
 
 const CreateAnActivity = ({ token, fetchActivities, navigate }) => {
   const [name, setName] = useState('');
@@ -49,7 +49,7 @@ const CreateAnActivity = ({ token, fetchActivities, navigate }) => {
   const id = open ? 'simple-popover' : undefined;
 
   return (
-    <Card elevation={6} style={{ background: '#50514F',margin:'2rem' }}>
+    <Card elevation={6} style={{ background: 'black',margin:'2rem' }}>
       <form onSubmit={(event) => {
         event.preventDefault();      
       }}>
@@ -58,12 +58,15 @@ const CreateAnActivity = ({ token, fetchActivities, navigate }) => {
         <CardMedia>
           <img style={{
             backgroundImage: `url(${navPIC})`, height: '25rem', width: '100%',
+            backgroundColor: 'black',
             backgroundPosition: 'top',
             backgroundSize: 'cover',
+            height: '100%',
+            width: '100%',
             backgroundRepeat: 'no-repeat'
           }} src={navPIC} />
         </CardMedia>
-          <Typography variant='h1' component='h3' style={{ color: '#C3B299' }}>
+          <Typography variant='h1' component='h3' style={{ color: 'black' }}>
             Create An Activity
           </Typography>
           <TextField style={{ background: '#FFFCFF', color: '#000000'}}

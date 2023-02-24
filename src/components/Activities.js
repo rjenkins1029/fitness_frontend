@@ -16,14 +16,14 @@ const Activities = ({ activities, token }) => {
     const activitiesToDisplay = searchTerm.length ? filteredActivities : activities;
 
     return (
-        <Card style={{ padding: '.5rem', margin: '.5rem', background: '#247BA0' }} elevation={6} >
+        <Card style={{  background: 'black' }} elevation={6} >
             <div className="main-activity-div">
                 <div >
                     <form onSubmit={(event) => {
                         event.preventDefault();
                     }}>
-                        <Card style={{ padding: '.5rem', margin: '.5rem', background: '#C3B299', }} >
-                            <TextField style={{ width: '100%', background: '#FFFCFF' }}
+                        <Card style={{ padding: '.5rem', margin: '.5rem', background: 'black', }} >
+                            <TextField style={{ width: '100%', background: 'white' }}
                                 type='text'
                                 label='Search'
                                 onChange={(event) => setSearchTerm(event.target.value)}
@@ -35,9 +35,9 @@ const Activities = ({ activities, token }) => {
                 <div>
                     {token ? (
 
-                        <Link style={{ textDecoration: 'none' }} to='/activities/create-activity'> <Button
+                        <Link style={{ textDecoration: 'none', }} to='/activities/create-activity'> <Button
                             style={
-                                { height: '4rem', width: '100%', borderRadius: 15, background: '#001242' }
+                                { height: '4rem', width: '100%', borderRadius: 15, background: 'black' }
                             } variant='contained'
                             type='submit'>
                             Create Activity
@@ -51,10 +51,12 @@ const Activities = ({ activities, token }) => {
                             const { name, description, id } = activity;
 
                             return (
-                                <Card key={id} style={{ padding: '.5rem', margin: '.5rem', background: '#FFFCFF', }}>
+                                <Card key={id} style={{ padding: '.5rem', margin: '.5rem', background: 'black', }}>
                                     <div  >
                                         <Link   style={{
-                                                            textDecoration: 'none'
+                                                            textDecoration: 'none',
+                                                            color: 'white',
+                                                            
                                                         }}
                                                         to={`/activities/routines/${id}`}><h3>{name}</h3></Link>
                                         <p>Description: {description}</p>
@@ -71,7 +73,7 @@ const Activities = ({ activities, token }) => {
                                                     ><Button
                                                         style={{
                                                             height: '3rem',
-                                                            margin: '.25rem', width: '100%', borderRadius: 15, backgroundColor: ' #50514F',
+                                                            margin: '.25rem', width: '100%', borderRadius: 15, backgroundColor: ' black',
                                                         }}
                                                         variant='contained'
                                                         type='submit'>Edit Activity

@@ -7,22 +7,24 @@ import {
      CardMedia,
       Button,
        CardActionArea,
-        CardActions 
+        CardActions, 
+        hexToRgb
       } from '@mui/material';
-import navPIC from "./images/Home.png"
+import navPIC from "./images/wp7597916.webp"
 
 const Home = () => {
   return (
 
-    <Card elevation={6}style={{ background: '#247BA0'}} >
+    <Card elevation={6}style={{ background: 'black'}} >
       <CardContent>
-      <Typography variant='h1' component='h3' style={{ color: '#C3B299'}}>
+      <Typography variant='h1' component='h3' style={{ color: 'whitesmoke'}}>
         Welcome to Fitness Trac.kr!
       </Typography>
       </CardContent>
       <CardMedia>
       <img style={{
         backgroundImage: `url(${navPIC})`,
+       
         backgroundPosition: 'center',
         backgroundSize: '100%',
         width:'100%',

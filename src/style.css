@@ -8,10 +8,11 @@
   
   .Navbar {
     display: flex;
-    color: #FFFCFF;
-    background-color: #50514F;
+    color: black;
+    background-color: black;
     flex-wrap: wrap; 
     justify-content:space-between;
+    font-size: 10pt;
      
    }
   
@@ -21,12 +22,11 @@
     margin: .25rem;
     padding: .25rem;  
     justify-content: center;
+    
+    
   
    }
-   body{    
-    padding: 1rem;
-    margin: .5rem;
-  }
+   
 
 
 
@@ -44,3 +44,6 @@
     flex: 1;
     margin: auto;
   }
+  
+
+  

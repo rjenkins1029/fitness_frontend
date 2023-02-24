@@ -31,8 +31,8 @@ const Login = ({ setToken, navigate }) => {
   return (
     <>
     <Card className='register-main-card' elevation={6} style={{ 
-      margin:'2rem 4rem ',
-      background: '#50514F',
+      
+      background: 'black',
       color:'#FFFCFF',
       textAlign:'center',
       alignContent:'center'    
@@ -53,14 +53,14 @@ const Login = ({ setToken, navigate }) => {
         label='Enter Password'
         onChange={(event) => setPassword(event.target.value)}
       />
-      <button style={{ height: '3rem', margin: '.25rem', backgroundColor:'#247BA0',color:'#FFFCFF' }} variant='contained' type='submit'>
+      <button style={{ height: '3rem', margin: '.25rem', backgroundColor:'black',color:'#FFFCFF' }} variant='contained' type='submit'>
         Log In
       </button>
       <Link style={{ textDecoration: 'none' }} to='/register'>
         <button
           style={{
             height: '3rem',
-            margin: '.25rem', backgroundColor:'#001242',color:'#FFFCFF'
+            margin: '.25rem', backgroundColor:'black',color:'#FFFCFF'
           }}
           variant='contained'
           type='submit'>

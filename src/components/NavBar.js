@@ -14,36 +14,41 @@ const Navbar = ({ logout, token }) => {
 
         <Link style={{ textDecoration: 'none' }} to='/'><button
           style={{
+            fontSize: '20pt',
             borderColor: '#CBD4C2',
-            backgroundColor: '#247BA0', color: '#FFFCFF', width: '100%', borderRadius: 15
+            backgroundColor: 'black', color: '#FFFCFF', width: '100%', borderRadius: 15
           }}>Home</button></Link>
 
 
         <Link style={{ textDecoration: 'none' }} to='/activities'><button style={{
+          fontSize: '20pt',
             borderColor: '#CBD4C2',
-            backgroundColor: '#247BA0', color: '#FFFCFF', width: '100%', borderRadius: 15}}>Activities</button></Link>
+            backgroundColor: 'black', color: '#FFFCFF', width: '100%', borderRadius: 15}}>Activities</button></Link>
 
         <Link style={{ textDecoration: 'none' }} to='/routines'><button style={{
+          fontSize: '20pt',
             borderColor: '#CBD4C2',
-            backgroundColor: '#247BA0', color: '#FFFCFF', width: '100%', borderRadius: 15}}>Routines</button></Link>
+            backgroundColor: 'black', color: '#FFFCFF', width: '100%', borderRadius: 15}}>Routines</button></Link>
         {
           token ? (
             <>
 
               <Link style={{ textDecoration: 'none' }} to='/myroutines'><button style={{
+                fontSize: '20pt',
             borderColor: '#CBD4C2',
-            backgroundColor: '#247BA0', color: '#FFFCFF', width: '100%', borderRadius: 15}}>MyRoutines</button></Link>
+            backgroundColor: 'black', color: '#FFFCFF', width: '100%', borderRadius: 15}}>MyRoutines</button></Link>
 
 
               <Link style={{ textDecoration: 'none' }} to='/' onClick={() => logout()}><button style={{
-            borderColor: '#247BA0',
-            backgroundColor: '#C3B299', color: '#000000', width: '100%', borderRadius: 15}}>Logout</button></Link>
+                fontSize: '13pt',
+            borderColor: 'black',
+            backgroundColor: 'white', color: '#000000', width: '100%', borderRadius: 15}}>Logout</button></Link>
 
             </>
           ) : (
 
             <Link style={{ textDecoration: 'none' }} to='/login'><button style={{
-            borderColor: '#247BA0',
+            borderColor: 'black',
             backgroundColor: '#CBD4C2', color: '#000000', width: '100%', borderRadius: 15}}>Login</button></Link>
 
           )

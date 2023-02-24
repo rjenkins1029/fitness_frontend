@@ -260,7 +260,7 @@ export const updateRoutineActivity = async(token, {count, duration, _id}) => {
     const result = await response.json();
     return result
   } catch (error) {
-    console.log(`error updating routine_activity ${id}`)
+    console.log(`error updating routine_activity ${_id}`)
   }
 }
 

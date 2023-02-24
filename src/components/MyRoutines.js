@@ -8,15 +8,15 @@ import {
     Card,
 } from "@mui/material";
 
-const myRoutines = ({ myRoutines, token, createRoutine, fetchMyRoutines, getMe }) => {
+const MyRoutines = ({ MyRoutines, token, createRoutine, fetchMyRoutines, getMe }) => {
     const [searchTerm, setSearchTerm] = useState('');
 
 
     const routineMatches = (routine, text) => {
         if (routine.name.toUpperCase().includes(text.toUpperCase())) return true
     }
-    const filteredRoutines = myRoutines.filter(routine => routineMatches(routine, searchTerm))
-    const RoutinesToDisplay = searchTerm.length ? filteredRoutines : myRoutines;
+    const filteredRoutines = MyRoutines.filter(routine => routineMatches(routine, searchTerm))
+    const RoutinesToDisplay = searchTerm.length ? filteredRoutines : MyRoutines;
     async function removeRoutine(token, _id) {
         await deleteRoutine(token, _id)
     }
@@ -55,7 +55,7 @@ const myRoutines = ({ myRoutines, token, createRoutine, fetchMyRoutines, getMe }
                                 <h3>{name}</h3>
                                 <p>Goal: {goal}</p>
                                 <p>Creator: {creatorName}</p>
-                                <Link style={{ textDecoration: 'none' }} className='routineButtons' to={`/myroutines/editroutine/${id}`}><Button
+                                <Link style={{ textDecoration: 'none' }} className='routineButtons' to={`/MyRoutines/editroutine/${id}`}><Button
                                                         style={
                                                             { height: '4rem',margin:'.25rem', width: '99%', borderRadius: 15, color: '#FFFCFF', background: '#001242' }
                                                         }>Edit</Button></Link>
@@ -158,4 +158,4 @@ const CreateRoutine = ({ fetchMyRoutines, token, createRoutine }) => {
 
 
 
-export default myRoutines;
+export default MyRoutines;
